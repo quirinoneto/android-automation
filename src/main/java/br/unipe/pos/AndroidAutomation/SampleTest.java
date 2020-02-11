@@ -22,15 +22,11 @@ public class SampleTest {
 	    DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 	    desiredCapabilities.setCapability("platformName", "Android");
 	    desiredCapabilities.setCapability("deviceName", "520389e5b8e3a305");
-	   // desiredCapabilities.setCapability("appPackage", "net.tecnotopia.SimpleCalculator");
-	   // desiredCapabilities.setCapability("appActivity", "net.tecnotopia.SimpleCalculator.MainActivity");
 
 	    File classpathRoot = new File(System.getProperty("user.dir"));
         File app = new File(classpathRoot, "/app/AnotherCalculator.apk");
         desiredCapabilities.setCapability("app", app.getAbsolutePath());
-
-
-	    
+ 
 	    URL remoteUrl = new URL("http://localhost:4723/wd/hub");
 
 	    driver = new AndroidDriver(remoteUrl, desiredCapabilities);
